@@ -1,0 +1,27 @@
+﻿<Window x:Class="SortingVisualizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SortingVisualizer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel VerticalAlignment="Top"
+                   HorizontalAlignment="Center">
+            <Button Command="{Binding Sort}"
+                    CommandParameter="Reset">Reset</Button>
+            <Button Command="{Binding Sort}"
+                    CommandParameter="Bubble">Bubble Sort</Button>
+            <Button Command="{Binding Sort}"
+                    CommandParameter="Selection">Selection Sort</Button>
+        </DockPanel>
+        <DockPanel VerticalAlignment="Bottom">
+            <Canvas x:Name="Canvas"
+                    VerticalAlignment="Stretch"
+                    Height="350"
+                    Background="Gray">
+            </Canvas>
+        </DockPanel>
+    </Grid>
+</Window>
